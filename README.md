@@ -1,11 +1,5 @@
 # Les-Senteurs-Gourmandes
 
-Voici une version améliorée de ton texte :
-
----
-
-# Les-Senteurs-Gourmandes
-
 Bonjour à tous,
 
 Vous trouverez ici toutes les informations et les techniques que j'utilise sur le site : [lessenteursgourmandes.fr](https://lessenteursgourmandes.fr).
