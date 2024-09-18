@@ -12,3 +12,5 @@ Vous trouverez ici toutes les informations et les techniques que j'utilise sur l
 Lors des réunions, je reçois les demandes d'évolutions souhaitées par le client et partage mon avis sur les solutions à mettre en place. 
 
 Mon travail consiste principalement à éditer les fichiers PHP, qui contiennent également du HTML, CSS et JavaScript, avec une majorité de code en PHP.
+
+Je travaille également à comprendre, créer, tester et intégrer des modules, blocs et templates en utilisant les balises spécifiques à WordPress.
