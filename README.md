@@ -14,3 +14,5 @@ Lors des réunions, je reçois les demandes d'évolutions souhaitées par le cli
 Mon travail consiste principalement à éditer les fichiers PHP, qui contiennent également du HTML, CSS et JavaScript, avec une majorité de code en PHP.
 
 Je travaille également à comprendre, créer, tester et intégrer des modules, blocs et templates en utilisant les balises spécifiques à WordPress.
+
+Création de coupon et gestion des propomotions (code, pourcentage (produit, panier...).
