@@ -16,3 +16,5 @@ Mon travail consiste principalement à éditer les fichiers PHP, qui contiennent
 Je travaille également à comprendre, créer, tester et intégrer des modules, blocs et templates en utilisant les balises spécifiques à WordPress.
 
 Création de coupon et gestion des propomotions (code, pourcentage (produit, panier...).
+
+Je vais être amené à travailler avec WooCommerce pour les produits, commandes, commentaires, coupons et l'aide au client.
