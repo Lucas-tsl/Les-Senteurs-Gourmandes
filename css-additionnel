@@ -1,0 +1,43 @@
+/* redimensionement des images de tri sur la fiche produit */
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    .tri-img {
+    width: 125px
+    
+    }
+}
+/* fin redimensionement des images de tri sur la fiche produit */
+
+
+/* Disposition mobile fiche produit */
+@media only screen and (max-width: 768px) {
+    .colonne-gauche, .colonne-droite {
+        display: contents; 
+    }
+
+    .colonne-gauche > div:first-child {
+        order: 1; 
+    }
+
+    .colonne-droite > div:first-child{
+        order: 2; 
+    }
+
+    .colonne-gauche > div:not(:first-child) {
+        order: 3; 
+    }
+}
+/* Fin Disposition mobile fiche produit */
+
+
+/* Onglet utilisation / ingredient fiche produit */
+.tabs-mobile-container {
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .tabs-mobile-container {
+        display: block;
+    }
+}
+/* Fin onglet utilisation / ingredient fiche produit */ 
