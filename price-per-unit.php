@@ -1,4 +1,5 @@
-add_action('woocommerce_single_product_summary', function () {
+<?php 
+    add_action('woocommerce_single_product_summary', function () {
     global $product;
 
     // Récupérer la contenance (ml) et le poids (g) depuis les champs ACF
@@ -19,3 +20,4 @@ add_action('woocommerce_single_product_summary', function () {
         echo '<p class="price-per-unit"><strong>' . sprintf(__('%.2f euros / 100 g', 'woocommerce'), $price_per_100g) . '</strong></p>';
     }
 }, 12);
+?>
