@@ -1,4 +1,5 @@
-# Les-Senteurs-Gourmandes
+![logo-LSG-1-ligne-signature-light](https://github.com/user-attachments/assets/e7a28ba8-4914-4bb5-8c71-2f9d799be76a)
+
 
 Bonjour à tous,
 
