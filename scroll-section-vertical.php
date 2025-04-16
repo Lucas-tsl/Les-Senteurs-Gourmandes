@@ -228,6 +228,66 @@ add_action('wp_enqueue_scripts', 'enqueue_fullpage_assets');
 ?>
 
 
+/ script à ajouter dans un fichier css
+<style>
+	
+/* full page js */
+.section1, .section2, .section3, .section4 .section5{
+  height: 100vh;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+
+
+@media (min-width: 768px) {
+  
+.custom-nav {
+  position: -webkit-sticky;  /* Pour le support dans certains navigateurs comme Safari */
+  position: sticky;          /* Permet de rendre l'élément sticky */
+  top: 20px;                 /* Décalage vers le bas par rapport au haut de la fenêtre */
+  left: 20px;                /* Décalage à gauche par rapport au bord de la fenêtre */
+  z-index: 999;              /* Assure que le menu reste au-dessus du contenu */
+  list-style: none;
+  padding: 0;
+}
+
+.custom-nav li {
+  margin-bottom: 20px; /* Espacement entre les éléments du menu */
+}
+
+.custom-nav li a {
+  color: #FFFFFF;                 /* Couleur des liens */
+  text-decoration: none;       /* Supprime le soulignement */
+  font-weight: bold;           /* Met le texte en gras */
+  padding: 10px;               /* Un peu de padding pour aérer */
+  display: block;              /* Affiche les liens sous forme de bloc */
+  transition: color 0.3s ease; /* Animation de transition pour la couleur */
+}
+
+.custom-nav li a:hover {
+  color: #FFFFFF;              /* Changer la couleur au survol */
+}
+
+   
+  }
+
+@media only screen and (max-width: 768px) {
+    .custom-nav {
+	display : none;
+}
+
+}
+
+  /* masque les produits les mieux notés sur la page coffrets  */
+body.is-coffret-category .wp-block-woocommerce-product-collection[data-collection*="top-rated"] {
+    display: none !important;
+}
+
+</style>
+
 
 
  
