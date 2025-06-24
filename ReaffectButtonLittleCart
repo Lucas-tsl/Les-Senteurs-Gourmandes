@@ -1,0 +1,28 @@
+add_action( 'wp_footer', 'lsg_change_mini_cart_link_dynamic', 100 );
+function lsg_change_mini_cart_link_dynamic() {
+    ?>
+    <script>
+      const updateMiniCartLink = () => {
+        const cartLinks = document.querySelectorAll('.wc-block-mini-cart__footer-actions a');
+        cartLinks.forEach(link => {
+          if (link.textContent.includes('Poursuivre mes achats')) {
+            link.setAttribute('href', 'https://lessenteursgourmandes.fr/categorie-produit/parfums/'); // 👉 Change ici l'URL cible
+          }
+        });
+      };
+
+      // Observe les changements du DOM pour détecter quand le mini-panier apparaît
+      const observer = new MutationObserver(() => {
+        updateMiniCartLink();
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+
+      // Pour les cas où le DOM est déjà prêt
+      document.addEventListener('DOMContentLoaded', updateMiniCartLink);
+    </script>
+    <?php
+}
