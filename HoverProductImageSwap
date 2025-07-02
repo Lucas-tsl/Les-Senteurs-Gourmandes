@@ -1,0 +1,63 @@
+<?php
+/**
+ * Plugin Name: Hover Product Image Swap
+ * Description: Affiche une image secondaire au survol des produits WooCommerce.
+ * Version: 1.0
+ * Author: Troteseil Lucas
+ */
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Sécurité
+
+// Injecte la 2e image dans la boucle produit
+add_filter('woocommerce_product_get_image', 'hover_swap_product_image', 10, 5);
+
+function hover_swap_product_image($image, $product, $size, $attr, $placeholder) {
+    $main_image = wp_get_attachment_image_src($product->get_image_id(), $size);
+    $main_url = $main_image[0];
+
+    $gallery = $product->get_gallery_image_ids();
+    if (!empty($gallery)) {
+        $second_url = wp_get_attachment_image_url($gallery[0], $size);
+
+        $html  = '<div class="hover-swap">';
+        $html .= '<img src="' . esc_url($main_url) . '" class="img-front" alt="' . esc_attr($product->get_name()) . '">';
+        $html .= '<img src="' . esc_url($second_url) . '" class="img-back" alt="' . esc_attr($product->get_name()) . ' - vue 2">';
+        $html .= '</div>';
+
+        return $html;
+    }
+
+    return $image;
+}
+
+// Ajoute le CSS automatiquement
+add_action('wp_head', 'hover_swap_css');
+
+function hover_swap_css() {
+    echo '<style>
+    .hover-swap {
+        position: relative;
+        display: block;
+        overflow: hidden;
+    }
+    .hover-swap img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: opacity 0.4s ease;
+    }
+    .hover-swap .img-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 2;
+    }
+    .hover-swap:hover .img-back {
+        opacity: 1;
+    }
+    .hover-swap:hover .img-front {
+        opacity: 0;
+    }
+    </style>';
+}
